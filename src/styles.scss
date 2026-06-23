@@ -1,0 +1,55 @@
+// ── Design Tokens ────────────────────────────────────────────────────────────
+:root {
+  // Colors — Earthy palette
+  --color-bg:           #EDE7DB; // Egg Shell
+  --color-surface:      #DDCCB7; // Linen
+  --color-border:       #DDCCB7; // Linen
+  --color-text:         #4D342D; // Mahogany — primary text
+  --color-text-muted:   #7A5A52; // Mahogany mid — secondary text
+  --color-accent:       #6A6A53; // Moss — accents
+  --color-accent-light: #9B9879; // Olive — hover
+  --color-badge-bg:     #9B9879; // Olive
+
+  --font-heading: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+  --font-body:    -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+}
+
+// ── Reset ────────────────────────────────────────────────────────────────────
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+// ── Typography ───────────────────────────────────────────────────────────────
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
