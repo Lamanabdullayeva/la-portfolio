@@ -1,0 +1,93 @@
+<section class="work" id="work">
+  <div class="work__inner">
+
+    <!-- ── Experience ──────────────────────────────────────────── -->
+    <div class="work__block">
+      <h2 class="work__block-title">Experience</h2>
+      <div class="work__timeline">
+        @for (item of experience; track item.company + item.period) {
+          <div class="work__entry" [class.work__entry--secondary]="item.type !== 'job'">
+            <div class="work__entry-dot"></div>
+            <div class="work__entry-body">
+              <div class="work__entry-header">
+                <div>
+                  <p class="work__entry-company">{{ item.company }}</p>
+                  <p class="work__entry-role">{{ item.role }}</p>
+                </div>
+                <div class="work__entry-meta">
+                  <span class="work__entry-period">{{ item.period }}</span>
+                  <span class="work__entry-location">{{ item.location }}</span>
+                </div>
+              </div>
+              <ul class="work__entry-desc">
+                @for (line of item.description; track line) {
+                  <li>{{ line }}</li>
+                }
+              </ul>
+              <div class="work__entry-tags">
+                @for (tag of item.tags; track tag) {
+                  <span class="work__tag">{{ tag }}</span>
+                }
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- ── Education ──────────────────────────────────────────── -->
+    <div class="work__block">
+      <h2 class="work__block-title">Education</h2>
+      <div class="work__timeline">
+        @for (item of education; track item.institution) {
+          <div class="work__entry work__entry--education">
+            <div class="work__entry-dot"></div>
+            <div class="work__entry-body">
+              <div class="work__entry-header">
+                <div>
+                  <p class="work__entry-company">{{ item.institution }}</p>
+                  <p class="work__entry-role">{{ item.degree }} · {{ item.field }}</p>
+                </div>
+                <div class="work__entry-meta">
+                  <span class="work__entry-period">{{ item.period }}</span>
+                  <span class="work__entry-location">{{ item.location }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- ── Skills ─────────────────────────────────────────────── -->
+    <div class="work__block">
+      <h2 class="work__block-title">Skills</h2>
+      <div class="work__skill-groups">
+        @for (group of skillGroups; track group.label) {
+          <div class="work__skill-group">
+            <p class="work__skill-group-label">{{ group.label }}</p>
+            <div class="work__tags">
+              @for (item of group.items; track item) {
+                <span class="work__tag">{{ item }}</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- ── Languages ──────────────────────────────────────────── -->
+    <div class="work__block">
+      <h2 class="work__block-title">Languages</h2>
+      <div class="work__languages">
+        @for (lang of languages; track lang.name) {
+          <div class="work__lang-item">
+            <span class="work__lang-name">{{ lang.name }}</span>
+            <span class="work__lang-level">{{ lang.level }}</span>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+</section>

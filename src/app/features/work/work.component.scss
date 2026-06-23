@@ -1,0 +1,241 @@
+.work {
+  min-height: 100vh;
+  padding: 120px 3rem 6rem;
+  border-top: 0.5px solid var(--color-border);
+
+  &__inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  // ── Section block (Experience / Education / Skills) ───────────
+  &__block-title {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+  }
+
+  // ── Timeline ──────────────────────────────────────────────────
+  &__timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    // vertical line
+    &::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 0;
+      width: 1px;
+      background: var(--color-border);
+    }
+  }
+
+  &__entry {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 3rem;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__entry-dot {
+    flex-shrink: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    margin-top: 5px;
+    position: relative;
+    z-index: 1;
+    left: -4px;
+  }
+
+  &__entry--education &__entry-dot {
+    background: var(--color-surface);
+    border: 1.5px solid var(--color-accent);
+  }
+
+  &__entry-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__entry-company {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  &__entry-role {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  &__entry-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2rem;
+    flex-shrink: 0;
+  }
+
+  &__entry-period {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+
+  &__entry-location {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    opacity: 0.7;
+  }
+
+  &__entry-desc {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    li {
+      font-family: var(--font-body);
+      font-size: 0.975rem;
+      color: var(--color-text);
+      line-height: 1.65;
+      padding-left: 1rem;
+      position: relative;
+
+      &::before {
+        content: '–';
+        position: absolute;
+        left: 0;
+        color: var(--color-text-muted);
+      }
+    }
+  }
+
+  // ── Tags ──────────────────────────────────────────────────────
+  &__entry-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__tag {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    background: var(--color-surface);
+    border: 0.5px solid var(--color-border);
+    border-radius: 20px;
+    padding: 3px 12px;
+    letter-spacing: 0.03em;
+
+    &--skill {
+      font-size: 0.875rem;
+      padding: 6px 16px;
+    }
+  }
+
+  // ── Skill groups ──────────────────────────────────────────────
+  &__skill-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__skill-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  &__skill-group-label {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    opacity: 0.7;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  // ── Languages ─────────────────────────────────────────────────
+  &__languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 3rem;
+  }
+
+  &__lang-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  &__lang-name {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+  }
+
+  &__lang-level {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    opacity: 0.8;
+  }
+
+  // ── Tablet ────────────────────────────────────────────────────
+  @media (max-width: 900px) {
+    padding: 120px 2rem 5rem;
+  }
+
+  // ── Mobile ────────────────────────────────────────────────────
+  @media (max-width: 640px) {
+    padding: 100px 1.5rem 4rem;
+
+    &__entry-header {
+      flex-direction: column;
+    }
+
+    &__entry-meta {
+      align-items: flex-start;
+    }
+  }
+}
