@@ -49,6 +49,102 @@
     }
   }
 
+  &__cv-btn {
+    display: inline-flex;
+    align-items: center;
+    background: var(--color-badge-bg);
+    color: var(--color-bg) !important;
+    border: 0.5px solid transparent;
+    border-radius: 20px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1.5 !important;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+
+    &:hover {
+      border-color: var(--color-accent) !important;
+      color: var(--color-text) !important;
+    }
+  }
+
+  &__lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: none;
+    border: 0.5px solid var(--color-border);
+    border-radius: 6px;
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+
+    &:hover {
+      color: var(--color-text);
+      border-color: var(--color-accent);
+    }
+  }
+
+  &__lang-chevron {
+    opacity: 0.6;
+    transition: transform 0.2s;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__lang-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    list-style: none;
+    background: var(--color-bg);
+    border: 0.5px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.25rem;
+    min-width: 64px;
+    box-shadow: 0 4px 16px rgba(77, 52, 45, 0.08);
+    z-index: 200;
+  }
+
+  &__lang-option {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    text-align: center;
+
+    &:hover {
+      background: var(--color-surface);
+      color: var(--color-text);
+    }
+
+    &--active {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+  }
+
   // ── Tablet ──────────────────────────────────────────────────────────────
   @media (max-width: 768px) {
     padding: 1rem 1.5rem;
