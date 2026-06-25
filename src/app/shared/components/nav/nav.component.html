@@ -1,31 +1,31 @@
 <nav class="nav">
-  <div class="nav__name">Laman Abdullayeva</div>
+  <div class="nav_name">Laman Abdullayeva</div>
 
-  <ul class="nav__links">
+  <ul class="nav_links">
     <li><a href="#hero">Home</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#hobbies">Hobbies</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 
-  <div class="nav__socials">
-    <a class="nav__cv-btn" [href]="cv.en" target="_blank" rel="noopener" download>
+  <div class="nav_socials">
+    <a class="nav_cv-btn" [href]="cv.en" target="_blank" rel="noopener" download>
       Download CV
     </a>
 
-    <div class="nav__lang">
-      <button class="nav__lang-btn" (click)="langOpen = !langOpen" aria-haspopup="listbox">
+    <div class="nav_lang">
+      <button class="nav_lang-btn" (click)="langOpen = !langOpen" aria-haspopup="listbox">
         {{ lang }}
-        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" class="nav__lang-chevron" [class.nav__lang-chevron--open]="langOpen">
+        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" class="nav_lang-chevron" [class.nav_lang-chevron--open]="langOpen">
           <path d="M2 4 L6 8 L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
       @if (langOpen) {
-        <ul class="nav__lang-dropdown" role="listbox">
+        <ul class="nav_lang-dropdown" role="listbox">
           @for (option of langs; track option) {
             <li
-              class="nav__lang-option"
-              [class.nav__lang-option--active]="lang === option"
+              class="nav_lang-option"
+              [class.nav_lang-option--active]="lang === option"
               (click)="selectLang(option)"
               role="option"
               [attr.aria-selected]="lang === option">

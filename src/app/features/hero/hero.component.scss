@@ -7,26 +7,26 @@
   gap: 3rem;
 
   // ── Left column ────────────────────────────────────────────────────────
-  &__left {
+  &_left {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
   }
 
-  &__greeting {
+  &_greeting {
     font-family: var(--font-body);
     font-size: 2.25rem;
     color: var(--color-text-muted);
   }
 
-  &__pronunciation {
+  &_pronunciation {
     font-size: 1.6rem;
     color: var(--color-text-muted);
     font-style: italic;
     opacity: 0.7;
   }
 
-  &__title {
+  &_title {
     font-family: var(--font-heading);
     font-size: clamp(2.4rem, 4.5vw, 3.8rem);
     font-weight: 700;
@@ -34,26 +34,26 @@
     color: var(--color-text);
   }
 
-  &__location {
+  &_location {
     font-family: var(--font-body);
     font-size: 1.4rem;
     color: var(--color-text-muted);
   }
 
-  &__badges {
+  &_badges {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
   }
 
   // ── Right column ───────────────────────────────────────────────────────
-  &__right {
+  &_right {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  &__photo-wrapper {
+  &_photo-wrapper {
     width: clamp(300px, 44vw, 520px);
     height: clamp(360px, 52vw, 620px);
     border-radius: 20px;
@@ -61,7 +61,7 @@
     border: 1px solid var(--color-border);
   }
 
-  &__photo {
+  &_photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -73,7 +73,7 @@
     padding: 80px 2rem 0;
     gap: 2rem;
 
-    &__photo-wrapper {
+    &_photo-wrapper {
       width: clamp(220px, 42vw, 360px);
       height: clamp(260px, 50vw, 430px);
       border-radius: 16px;
@@ -87,18 +87,18 @@
     text-align: center;
     min-height: auto;
 
-    &__right {
+    &_right {
       order: -1;
       justify-content: center;
     }
 
-    &__photo-wrapper {
+    &_photo-wrapper {
       width: 200px;
       height: 240px;
       border-radius: 14px;
     }
 
-    &__badges {
+    &_badges {
       justify-content: center;
     }
   }

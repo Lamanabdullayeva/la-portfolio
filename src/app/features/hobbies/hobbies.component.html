@@ -1,9 +1,9 @@
 <section class="hobbies" id="hobbies">
-  <div class="hobbies__grid">
+  <div class="hobbies_grid">
     @for (hobby of hobbies; track hobby.slug) {
-      <div class="hobbies__card">
-        <div class="hobbies__img" [style.background]="hobby.bg" [style.color]="hobby.color">
-          <span class="hobbies__name">{{ hobby.name }}</span>
+      <div class="hobbies_card">
+        <div class="hobbies_img" [style.background]="hobby.bg" [style.color]="hobby.color">
+          <span class="hobbies_name">{{ hobby.name }}</span>
         </div>
       </div>
     }

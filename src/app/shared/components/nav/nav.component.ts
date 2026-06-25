@@ -24,7 +24,7 @@ export class NavComponent {
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent): void {
     const target = event.target as HTMLElement;
-    if (!target.closest('.nav__lang')) {
+    if (!target.closest('.nav_lang')) {
       this.langOpen = false;
     }
   }

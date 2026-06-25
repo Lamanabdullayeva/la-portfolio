@@ -1,18 +1,18 @@
-<section class="hero">
-  <div class="hero__left">
-    <p class="hero__greeting">{{ greeting }} <span class="hero__pronunciation">{{ pronunciation }}</span>,</p>
-    <h1 class="hero__title">{{ title }}</h1>
-    <p class="hero__location">{{ location }}</p>
-    <div class="hero__badges">
+<section class="hero" id="hero">
+  <div class="hero_left">
+    <p class="hero_greeting">{{ greeting }} <span class="hero_pronunciation">{{ pronunciation }}</span>,</p>
+    <h1 class="hero_title">{{ title }}</h1>
+    <p class="hero_location">{{ location }}</p>
+    <div class="hero_badges">
       @for (badge of badges; track badge) {
         <la-badge [label]="badge" />
       }
     </div>
   </div>
 
-  <div class="hero__right">
-    <div class="hero__photo-wrapper">
-      <img class="hero__photo" [src]="photo" [alt]="name" />
+  <div class="hero_right">
+    <div class="hero_photo-wrapper">
+      <img class="hero_photo" [src]="photo" [alt]="name" />
     </div>
   </div>
 </section>
