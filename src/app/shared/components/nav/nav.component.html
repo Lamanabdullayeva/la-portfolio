@@ -3,7 +3,11 @@
 
   <ul class="nav_links">
     @for (link of navLinks; track link.fragment) {
-      <li><a routerLink="/" [fragment]="link.fragment">{{ link.label }}</a></li>
+      <li>
+        <a routerLink="/" [fragment]="link.fragment" [class.nav_links-active]="activeFragment === link.fragment">
+          {{ link.label }}
+        </a>
+      </li>
     }
   </ul>
 

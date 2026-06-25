@@ -1,14 +1,14 @@
 // ── Design Tokens ────────────────────────────────────────────────────────────
 :root {
-  // Colors — Earthy palette
-  --color-bg:           #EDE7DB; // Egg Shell
-  --color-surface:      #DDCCB7; // Linen
-  --color-border:       #DDCCB7; // Linen
-  --color-text:         #4D342D; // Mahogany — primary text
-  --color-text-muted:   #7A5A52; // Mahogany mid — secondary text
-  --color-accent:       #6A6A53; // Moss — accents
-  --color-accent-light: #9B9879; // Olive — hover
-  --color-badge-bg:     #9B9879; // Olive
+  // Colors — Matcha Latte & Sage palette
+  --color-bg:           #F2EFE9; // Oat Milk
+  --color-surface:      #E3E8DB; // Matcha Cream
+  --color-border:       #C8D0C4; // Soft sage border
+  --color-text:         #1F2D24; // Deep Forest — primary text
+  --color-text-muted:   #7F9482; // Soft Sage — secondary text
+  --color-accent:       #7F9482; // Soft Sage — accents
+  --color-accent-light: #A0B5A3; // Light sage — hover
+  --color-badge-bg:     #7F9482; // Soft Sage
 
   --font-heading: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
   --font-body:    -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;

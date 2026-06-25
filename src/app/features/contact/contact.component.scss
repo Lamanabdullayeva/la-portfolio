@@ -2,14 +2,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   gap: 2.5rem;
   padding: 5rem 3rem;
-  border-top: 0.5px solid var(--color-border);
+  background: #161D08;
+  --color-text:       #F2EFE9;
+  --color-text-muted: rgba(242, 239, 233, 0.55);
+  --color-border:     rgba(242, 239, 233, 0.15);
+  --color-accent:     #C8D0BF;
+  border-top: 0.5px solid rgba(242, 239, 233, 0.15);
 
   &_label {
     font-family: var(--font-body);
     font-size: 1rem;
-    color: var(--color-text-muted);
+    color: rgba(242, 239, 233, 0.55);
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
@@ -27,20 +34,20 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-    border: 0.5px solid var(--color-border);
+    border: 0.5px solid rgba(242, 239, 233, 0.2);
     border-radius: 12px;
     text-decoration: none;
     transition: border-color 0.2s;
 
     &:hover {
-      border-color: var(--color-accent);
+      border-color: rgba(242, 239, 233, 0.6);
     }
   }
 
   &_item-label {
     font-family: var(--font-body);
     font-size: 0.8rem;
-    color: var(--color-text-muted);
+    color: rgba(242, 239, 233, 0.55);
     text-transform: uppercase;
     letter-spacing: 0.06em;
   }
@@ -48,7 +55,7 @@
   &_item-value {
     font-family: var(--font-body);
     font-size: 0.95rem;
-    color: var(--color-text);
+    color: #F2EFE9;
   }
 
   @media (max-width: 640px) {

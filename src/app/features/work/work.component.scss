@@ -1,7 +1,13 @@
 .work {
   min-height: 100vh;
   padding: 120px 3rem 6rem;
-  border-top: 0.5px solid var(--color-border);
+  background: #424D2C;
+  --color-text:       #F2EFE9;
+  --color-text-muted: rgba(242, 239, 233, 0.65);
+  --color-border:     rgba(242, 239, 233, 0.2);
+  --color-surface:    rgba(242, 239, 233, 0.08);
+  --color-accent:     #C8D0BF;
+  border-top: 0.5px solid rgba(242, 239, 233, 0.2);
 
   &_inner {
     max-width: 860px;

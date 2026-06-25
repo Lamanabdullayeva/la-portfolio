@@ -5,6 +5,12 @@
   min-height: 100vh;
   padding: 80px 3rem 0;
   gap: 3rem;
+  background: #8B9878;
+  --color-text:       #F2EFE9;
+  --color-text-muted: rgba(242, 239, 233, 0.65);
+  --color-border:     rgba(242, 239, 233, 0.2);
+  --color-badge-bg:   rgba(242, 239, 233, 0.15);
+  --color-accent:     #C8D0BF;
 
   // ── Left column ────────────────────────────────────────────────────────
   &_left {
@@ -54,8 +60,8 @@
   }
 
   &_photo-wrapper {
-    width: clamp(300px, 44vw, 520px);
-    height: clamp(360px, 52vw, 620px);
+    width: clamp(240px, 34vw, 420px);
+    height: clamp(290px, 42vw, 500px);
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid var(--color-border);
