@@ -6,13 +6,21 @@
   </div>
 
   <div class="jewellery_grid">
-    @if (images.length === 0) {
-      <p class="jewellery_empty">Gallery coming soon.</p>
-    }
-    @for (img of images; track img) {
-      <div class="jewellery_item">
-        <img [src]="img" alt="Jewellery piece" />
+    @for (img of images; track img.url; let i = $index) {
+      <div class="jewellery_item" (click)="open(i)">
+        <img [src]="img.url" [alt]="img.alt" loading="lazy" />
       </div>
     }
   </div>
+
+  <button class="jewellery_top" (click)="scrollToTop()">↑ Back to top</button>
 </div>
+
+@if (activeImage) {
+  <div class="lightbox" (click)="close()">
+    <button class="lightbox_close" (click)="close()">✕</button>
+    <button class="lightbox_arrow lightbox_arrow--prev" (click)="$event.stopPropagation(); prev()">‹</button>
+    <img class="lightbox_img" [src]="activeImage.url" [alt]="activeImage.alt" (click)="$event.stopPropagation()" />
+    <button class="lightbox_arrow lightbox_arrow--next" (click)="$event.stopPropagation(); next()">›</button>
+  </div>
+}
