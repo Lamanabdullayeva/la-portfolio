@@ -4,8 +4,8 @@
     <h1 class="hero_title">{{ title }}</h1>
     <p class="hero_location">{{ location }}</p>
     <div class="hero_badges">
-      @for (badge of badges; track badge) {
-        <la-badge [label]="badge" />
+      @for (badge of badges; track badge.label) {
+        <la-badge [label]="badge.label" [link]="badge.link" [fragment]="badge.fragment" />
       }
     </div>
   </div>

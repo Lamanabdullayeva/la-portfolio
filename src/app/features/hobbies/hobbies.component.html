@@ -8,7 +8,7 @@
         <div class="hobbies_content">
           <p class="hobbies_desc">{{ hobby.description }}</p>
           @if (hobby.hasLink) {
-            <a class="hobbies_btn" [href]="hobby.linkUrl">{{ hobby.linkLabel }}</a>
+            <a class="hobbies_btn" [routerLink]="hobby.linkUrl">{{ hobby.linkLabel }}</a>
           }
         </div>
       </div>

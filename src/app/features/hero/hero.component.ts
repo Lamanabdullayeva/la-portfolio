@@ -15,5 +15,8 @@ export class HeroComponent {
   readonly title = 'Senior Frontend Developer & Jewellery Maker';
   readonly location = 'based in Berlin.';
   readonly photo = 'assets/profile_photo.jpg'; // replace with actual filename
-  readonly badges = ['My Work', 'My Jewellery'];
+  readonly badges = [
+    { label: 'My Work', link: '/', fragment: 'work' },
+    { label: 'My Jewellery', link: '/jewellery', fragment: null },
+  ];
 }

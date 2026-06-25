@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 interface Hobby {
   name: string;
@@ -14,7 +15,7 @@ interface Hobby {
 @Component({
   selector: 'la-hobbies',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './hobbies.component.html',
   styleUrl: './hobbies.component.scss',
 })
