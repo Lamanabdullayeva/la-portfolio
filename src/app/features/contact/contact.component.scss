@@ -58,6 +58,23 @@
     color: #F2EFE9;
   }
 
+  &_top {
+    background: none;
+    border: 1px solid rgba(242, 239, 233, 0.25);
+    color: rgba(242, 239, 233, 0.55);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+
+    &:hover {
+      color: #F2EFE9;
+      border-color: rgba(242, 239, 233, 0.6);
+    }
+  }
+
   @media (max-width: 640px) {
     padding: 3rem 1.5rem;
 

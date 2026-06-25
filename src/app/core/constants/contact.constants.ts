@@ -5,6 +5,11 @@ export const CONTACT = {
   phone: '+49 160 544 40 17',
 } as const;
 
+export const CONTACT_LABELS = {
+  sectionLabel: 'Contact me',
+  backToTop:    '↑ Back to top',
+} as const;
+
 export const CONTACT_ITEMS = [
   {
     label: 'Email',

@@ -1,5 +1,5 @@
 <section class="contact" id="contact">
-  <p class="contact_label">Contact me</p>
+  <p class="contact_label">{{ labels.sectionLabel }}</p>
 
   <div class="contact_items">
     @for (item of contactItems; track item.label) {
@@ -13,4 +13,6 @@
       </a>
     }
   </div>
+
+  <button class="contact_top" (click)="scrollToTop()">{{ labels.backToTop }}</button>
 </section>
