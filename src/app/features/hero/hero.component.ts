@@ -11,7 +11,7 @@ import { BadgeComponent } from '../../shared/components/badge/badge.component';
 export class HeroComponent {
   readonly name = 'Laman Abdullayeva';
   readonly greeting = "Hello, I'm Laman";
-  readonly pronunciation = '[Læman]';
+  readonly pronunciation = '[Læman, Läman]';
   readonly title = 'Senior Frontend Developer & Jewellery Maker';
   readonly location = 'based in Berlin.';
   readonly photo = 'assets/profile_photo.jpg'; // replace with actual filename

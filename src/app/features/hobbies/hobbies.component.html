@@ -1,9 +1,15 @@
 <section class="hobbies" id="hobbies">
-  <div class="hobbies_grid">
+  <div class="hobbies_list">
     @for (hobby of hobbies; track hobby.slug) {
       <div class="hobbies_card">
         <div class="hobbies_img" [style.background]="hobby.bg" [style.color]="hobby.color">
-          <span class="hobbies_name">{{ hobby.name }}</span>
+          <h3 class="hobbies_title">{{ hobby.name }}</h3>
+        </div>
+        <div class="hobbies_content">
+          <p class="hobbies_desc">{{ hobby.description }}</p>
+          @if (hobby.hasLink) {
+            <a class="hobbies_btn" [href]="hobby.linkUrl">{{ hobby.linkLabel }}</a>
+          }
         </div>
       </div>
     }
