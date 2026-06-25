@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { BadgeComponent } from '../../shared/components/badge/badge.component';
+import { HeroBadge } from '../../core/interfaces/hero-badge.interface';
+import { HERO, HERO_BADGES } from '../../core/constants/hero.constants';
 
 @Component({
   selector: 'la-hero',
@@ -9,14 +11,11 @@ import { BadgeComponent } from '../../shared/components/badge/badge.component';
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
-  readonly name = 'Laman Abdullayeva';
-  readonly greeting = "Hello, I'm Laman";
-  readonly pronunciation = '[Læman, Läman]';
-  readonly title = 'Senior Frontend Developer & Jewellery Maker';
-  readonly location = 'based in Berlin.';
-  readonly photo = 'assets/profile_photo.jpg'; // replace with actual filename
-  readonly badges = [
-    { label: 'My Work', link: '/', fragment: 'work' },
-    { label: 'My Jewellery', link: '/jewellery', fragment: null },
-  ];
+  readonly name: string          = HERO.name;
+  readonly greeting: string      = HERO.greeting;
+  readonly pronunciation: string = HERO.pronunciation;
+  readonly title: string         = HERO.title;
+  readonly location: string      = HERO.location;
+  readonly photo: string         = HERO.photo;
+  readonly badges: HeroBadge[]   = HERO_BADGES;
 }

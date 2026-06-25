@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CvLink } from '../../core/interfaces/cv-link.interface';
 import { CV_LINKS } from '../../core/constants/cv-links.constants';
 
 @Component({
@@ -9,5 +10,5 @@ import { CV_LINKS } from '../../core/constants/cv-links.constants';
   styleUrl: './cv-download.component.scss',
 })
 export class CvDownloadComponent {
-  readonly cv = CV_LINKS;
+  readonly cvEntries: CvLink[] = Object.values(CV_LINKS);
 }

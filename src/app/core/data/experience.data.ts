@@ -1,4 +1,4 @@
-import { WorkEntry } from '../models/portfolio.models';
+import { WorkEntry } from '../interfaces/work-entry.interface';
 
 export const EXPERIENCE: WorkEntry[] = [
   {

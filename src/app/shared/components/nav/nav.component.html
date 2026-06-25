@@ -2,14 +2,13 @@
   <div class="nav_name">Laman Abdullayeva</div>
 
   <ul class="nav_links">
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#hobbies">Hobbies</a></li>
-    <li><a href="#contact">Contact</a></li>
+    @for (link of navLinks; track link.fragment) {
+      <li><a routerLink="/" [fragment]="link.fragment">{{ link.label }}</a></li>
+    }
   </ul>
 
   <div class="nav_socials">
-    <a class="nav_cv-btn" [href]="cv.en" target="_blank" rel="noopener" download>
+    <a class="nav_cv-btn" [href]="cv.en.url" target="_blank" rel="noopener">
       Download CV
     </a>
 

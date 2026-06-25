@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { CONTACT } from '../../core/constants/contact.constants';
-import { SOCIAL_LINKS } from '../../core/constants/social-links.constants';
+import { CONTACT_ITEMS } from '../../core/constants/contact.constants';
 
 @Component({
   selector: 'la-contact',
@@ -10,7 +9,5 @@ import { SOCIAL_LINKS } from '../../core/constants/social-links.constants';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  readonly email = CONTACT.email;
-  readonly phone = CONTACT.phone;
-  readonly linkedin = SOCIAL_LINKS.linkedin;
+  readonly contactItems: typeof CONTACT_ITEMS = CONTACT_ITEMS;
 }

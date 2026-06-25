@@ -2,19 +2,15 @@
   <p class="contact_label">Contact me</p>
 
   <div class="contact_items">
-    <a class="contact_item" [href]="'mailto:' + email">
-      <span class="contact_item-label">Email</span>
-      <span class="contact_item-value">{{ email }}</span>
-    </a>
-
-    <a class="contact_item" [href]="'tel:' + phone.replace(' ', '')">
-      <span class="contact_item-label">Phone</span>
-      <span class="contact_item-value">{{ phone }}</span>
-    </a>
-
-    <a class="contact_item" [href]="linkedin" target="_blank" rel="noopener">
-      <span class="contact_item-label">LinkedIn</span>
-      <span class="contact_item-value">laman-abdullayeva</span>
-    </a>
+    @for (item of contactItems; track item.label) {
+      <a
+        class="contact_item"
+        [href]="item.href"
+        [target]="item.external ? '_blank' : '_self'"
+        [rel]="item.external ? 'noopener' : null">
+        <span class="contact_item-label">{{ item.label }}</span>
+        <span class="contact_item-value">{{ item.value }}</span>
+      </a>
+    }
   </div>
 </section>

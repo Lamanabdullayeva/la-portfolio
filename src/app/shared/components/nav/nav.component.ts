@@ -1,17 +1,20 @@
 import { Component, HostListener } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { SOCIAL_LINKS } from '../../../core/constants/social-links.constants';
 import { CV_LINKS } from '../../../core/constants/cv-links.constants';
+import { NAV_LINKS } from '../../../core/constants/nav-links.constants';
 
 @Component({
   selector: 'la-nav',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
 })
 export class NavComponent {
-  readonly links = SOCIAL_LINKS;
-  readonly cv = CV_LINKS;
+  readonly navLinks: typeof NAV_LINKS   = NAV_LINKS;
+  readonly links: typeof SOCIAL_LINKS   = SOCIAL_LINKS;
+  readonly cv: typeof CV_LINKS          = CV_LINKS;
   readonly langs: ('EN' | 'DE')[] = ['EN', 'DE'];
   lang: 'EN' | 'DE' = 'EN';
   langOpen = false;

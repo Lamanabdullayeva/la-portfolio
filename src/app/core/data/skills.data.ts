@@ -1,4 +1,5 @@
-import { SkillGroup, Language } from '../models/portfolio.models';
+import { SkillGroup } from '../interfaces/skill-group.interface';
+import { Language } from '../interfaces/language.interface';
 
 export const SKILL_GROUPS: SkillGroup[] = [
   {

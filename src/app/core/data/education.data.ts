@@ -1,4 +1,4 @@
-import { EducationEntry } from '../models/portfolio.models';
+import { EducationEntry } from '../interfaces/education-entry.interface';
 
 export const EDUCATION: EducationEntry[] = [
   {
