@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { JewelleryImage } from '../../core/interfaces/jewellery-image.interface';
 import { JEWELLERY_IMAGES } from '../../core/data/jewellery.data';
@@ -10,9 +10,13 @@ import { JEWELLERY_IMAGES } from '../../core/data/jewellery.data';
   templateUrl: './jewellery.component.html',
   styleUrl: './jewellery.component.scss',
 })
-export class JewelleryComponent {
+export class JewelleryComponent implements OnInit {
   readonly images: JewelleryImage[] = JEWELLERY_IMAGES;
   activeIndex: number | null = null;
+
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
 
   get activeImage(): JewelleryImage | null {
     return this.activeIndex !== null ? this.images[this.activeIndex] : null;

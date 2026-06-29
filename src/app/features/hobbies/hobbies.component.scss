@@ -1,17 +1,16 @@
 .hobbies {
   padding: 120px 3rem 6rem;
   background: #F2EFE9;
-  --color-text:       #F2EFE9;
-  --color-text-muted: rgba(242, 239, 233, 0.65);
-  --color-border:     rgba(242, 239, 233, 0.2);
-  --color-accent:     #C8D0BF;
-  border-top: 0.5px solid rgba(242, 239, 233, 0.2);
+  --color-text:       #1F2D24;
+  --color-text-muted: rgba(31, 45, 36, 0.65);
+  --color-border:     rgba(31, 45, 36, 0.2);
+  border-top: 0.5px solid rgba(31, 45, 36, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &_list {
-    width: 55vw;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -19,7 +18,9 @@
 
   &_card {
     border-radius: 16px;
-    padding: 2rem 2.5rem;
+    padding: 3.5rem 2.5rem;
+    background: #C8D0BF;
+    color: #1F2D24;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -30,14 +31,15 @@
     font-size: 2.2rem;
     font-weight: 400;
     line-height: 1.2;
-    color: inherit;
+    color: #1F2D24;
   }
 
   &_desc {
     font-family: var(--font-body);
     font-size: 0.9rem;
-    opacity: 0.75;
+    color: rgba(31, 45, 36, 0.75);
     line-height: 1.65;
+    white-space: pre-line;
   }
 
   &_btn {
@@ -63,7 +65,7 @@
   @media (max-width: 900px) {
     padding: 100px 2rem 5rem;
 
-    &_list { width: 80vw; }
+    &_list { width: 70vw; }
   }
 
   @media (max-width: 640px) {

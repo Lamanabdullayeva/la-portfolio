@@ -21,6 +21,7 @@ export class NavComponent implements OnInit, OnDestroy {
   lang: 'EN' | 'DE'  = 'EN';
   langOpen            = false;
   activeFragment      = 'hero';
+  downloadLabel: string = 'Download my CV';
 
   private observer: IntersectionObserver | null = null;
   private routerSub: Subscription | null = null;
