@@ -7,4 +7,5 @@ export interface Hobby {
   hasLink: boolean;
   linkLabel?: string;
   linkUrl?: string;
+  tags?: string[];
 }

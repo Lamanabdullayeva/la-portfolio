@@ -4,6 +4,13 @@
       <div class="hobbies_card">
         <h3 class="hobbies_title">{{ hobby.name }}</h3>
         <p class="hobbies_desc">{{ hobby.description }}</p>
+        @if (hobby.tags) {
+          <div class="hobbies_tags">
+            @for (tag of hobby.tags; track tag) {
+              <span class="hobbies_tag">{{ tag }}</span>
+            }
+          </div>
+        }
         @if (hobby.hasLink) {
           <a class="hobbies_btn" [routerLink]="hobby.linkUrl">{{ hobby.linkLabel }}</a>
         }
