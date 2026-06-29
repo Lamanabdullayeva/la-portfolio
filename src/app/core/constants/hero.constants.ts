@@ -10,6 +10,6 @@ export const HERO = {
 } as const;
 
 export const HERO_BADGES: HeroBadge[] = [
-  { label: 'My Work',      link: '/',           fragment: 'work' },
+  { label: 'My Work',      link: '/projects',   fragment: null   },
   { label: 'My Jewellery', link: '/jewellery',  fragment: null   },
 ];

@@ -1,0 +1,29 @@
+<div class="projects">
+  <div class="projects_header">
+    <a class="projects_back" routerLink="/">← Back</a>
+    <h1 class="projects_title">My Work</h1>
+    <p class="projects_subtitle">simpleshow gmbh · Frontend Developer</p>
+  </div>
+
+  <div class="projects_grid">
+    @for (project of projects; track project.title) {
+      <div class="projects_card">
+        <div class="projects_video-placeholder">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="1" stroke-opacity="0.4"/>
+            <path d="M19 16l14 8-14 8V16z" fill="currentColor" fill-opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="projects_info">
+          <h2 class="projects_name">{{ project.title }}</h2>
+          <p class="projects_desc">{{ project.description }}</p>
+          <div class="projects_tags">
+            @for (tag of project.tags; track tag) {
+              <span class="projects_tag">{{ tag }}</span>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
