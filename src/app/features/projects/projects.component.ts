@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, afterNextRender } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 interface Project {
@@ -34,7 +34,11 @@ export class ProjectsComponent implements OnInit {
     },
   ];
 
+    constructor() {
+    afterNextRender(() => window.scrollTo(0, 0));
+  }
+  
   ngOnInit(): void {
     window.scrollTo(0, 0);
+    }
   }
-}
