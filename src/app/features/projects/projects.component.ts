@@ -21,6 +21,10 @@ export class ProjectsComponent {
   readonly labels = PROJECTS_LABELS;
   readonly projects: Project[];
 
+  openFullscreen(el: HTMLElement): void {
+    if (el.requestFullscreen) el.requestFullscreen();
+  }
+
   constructor(sanitizer: DomSanitizer) {
     afterNextRender(() => window.scrollTo(0, 0));
     this.projects = [
