@@ -1,6 +1,7 @@
 import { Component, afterNextRender } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { PROJECTS_LABELS } from '../../core/constants/projects.constants';
 
 interface Project {
   title: string;
@@ -17,6 +18,7 @@ interface Project {
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
+  readonly labels = PROJECTS_LABELS;
   readonly projects: Project[];
 
   constructor(sanitizer: DomSanitizer) {
@@ -27,7 +29,7 @@ export class ProjectsComponent {
         description: 'An interactive video trimming tool allowing users to cut and adjust video segments directly in the browser.',
         tags: ['Angular', 'TypeScript', 'RxJS'],
         videoUrl: sanitizer.bypassSecurityTrustResourceUrl(
-          'https://drive.google.com/file/d/1A1ScOoSrnGn-Ejq5eN4S-JyHBVuNEu_a/preview'
+          'https://drive.google.com/file/d/1qoxKtTTUdxE9h_JDLoqOnWoDValfIT_2/preview'
         ),
       },
       {
@@ -35,7 +37,7 @@ export class ProjectsComponent {
         description: 'Optimised PowerPoint upload flow with change history tracking, allowing users to review and revert slide modifications.',
         tags: ['Angular', 'TypeScript', 'RxJS'],
         videoUrl: sanitizer.bypassSecurityTrustResourceUrl(
-          'https://drive.google.com/file/d/1WQOE8QiagflgcephbLyubBtqAyG5edFy/preview'
+          'https://drive.google.com/file/d/1wZd_dYUE1dxSpsVUErKuqnYMrzuOB1qq/preview'
         ),
       },
       {
