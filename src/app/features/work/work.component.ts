@@ -19,7 +19,7 @@ export class WorkComponent {
     const tr = this.t().workContent.experience;
     return EXPERIENCE.map((e, i) => ({
       ...e,
-      role:        tr[i]?.role        ?? e.role,
+      role: tr[i]?.role ?? e.role,
       description: tr[i]?.description ?? e.description,
     }));
   });
@@ -29,7 +29,7 @@ export class WorkComponent {
     return EDUCATION.map((e, i) => ({
       ...e,
       degree: tr[i]?.degree ?? e.degree,
-      field:  tr[i]?.field  ?? e.field,
+      field: tr[i]?.field ?? e.field,
     }));
   });
 

@@ -19,9 +19,9 @@ export class HobbiesComponent {
     const tr = this.ts.t().hobbies;
     return HOBBIES.map(h => ({
       ...h,
-      name:        tr[h.slug]?.name        ?? h.name,
+      name: tr[h.slug]?.name ?? h.name,
       description: tr[h.slug]?.description ?? h.description,
-      linkLabel:   tr[h.slug]?.linkLabel   ?? h.linkLabel,
+      linkLabel: tr[h.slug]?.linkLabel ?? h.linkLabel,
     }));
   });
 }

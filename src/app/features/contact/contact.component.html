@@ -3,14 +3,11 @@
 
   <div class="contact_items">
     @for (item of contactItems; track item.label) {
-      <a
-        class="contact_item"
-        [href]="item.href"
-        [target]="item.external ? '_blank' : '_self'"
-        [rel]="item.external ? 'noopener' : null">
-        <span class="contact_item-label">{{ item.label }}</span>
-        <span class="contact_item-value">{{ item.value }}</span>
-      </a>
+    <a class="contact_item" [href]="item.href" [target]="item.external ? '_blank' : '_self'"
+      [rel]="item.external ? 'noopener' : null">
+      <span class="contact_item-label">{{ item.label }}</span>
+      <span class="contact_item-value">{{ item.value }}</span>
+    </a>
     }
   </div>
 
