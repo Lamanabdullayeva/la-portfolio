@@ -89,7 +89,7 @@
   }
 
   @media (max-width: 640px) {
-    padding: 90px 1.5rem 4rem;
+    padding: calc(var(--nav-height) + 4rem) 1.5rem 4rem;
 
     &_list {
       width: 100%;

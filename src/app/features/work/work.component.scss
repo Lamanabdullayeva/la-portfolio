@@ -232,7 +232,7 @@
 
   // ── Mobile ────────────────────────────────────────────────────
   @media (max-width: 640px) {
-    padding: 100px 1.5rem 4rem;
+    padding: calc(var(--nav-height) + 4rem) 1.5rem 4rem;
 
     &_entry-header {
       flex-direction: column;

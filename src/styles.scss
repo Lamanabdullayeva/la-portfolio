@@ -14,6 +14,21 @@
     -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
   --font-body:
     -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+
+  // Nav height — used for scroll-padding and section top padding
+  --nav-height: 74px;
+}
+
+@media (max-width: 768px) {
+  :root { --nav-height: 66px; }
+}
+
+@media (max-width: 640px) {
+  :root { --nav-height: 96px; }
+}
+
+@media (max-width: 480px) {
+  :root { --nav-height: 88px; }
 }
 
 // ── Reset ────────────────────────────────────────────────────────────────────
@@ -27,6 +42,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
   font-size: 16px;
 }
 
