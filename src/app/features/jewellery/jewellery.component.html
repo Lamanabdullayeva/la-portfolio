@@ -1,8 +1,8 @@
 <div class="jewellery">
   <div class="jewellery_header">
-    <a class="jewellery_back" routerLink="/">← Back</a>
-    <h1 class="jewellery_title">Jewellery</h1>
-    <p class="jewellery_subtitle">Handmade pieces, crafted from scratch.</p>
+    <a class="jewellery_back" [routerLink]="homeLink()">{{ t().jewellery.back }}</a>
+    <h1 class="jewellery_title">{{ t().jewellery.title }}</h1>
+    <p class="jewellery_subtitle">{{ t().jewellery.subtitle }}</p>
   </div>
 
   <div class="jewellery_grid">
@@ -13,7 +13,7 @@
     }
   </div>
 
-  <button class="jewellery_top" (click)="scrollToTop()">↑ Back to top</button>
+  <button class="jewellery_top" (click)="scrollToTop()">{{ t().jewellery.backToTop }}</button>
 </div>
 
 @if (activeImage) {

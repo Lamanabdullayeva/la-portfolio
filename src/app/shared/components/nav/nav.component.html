@@ -4,16 +4,16 @@
   <ul class="nav_links">
     @for (link of navLinks; track link.fragment) {
       <li>
-        <a routerLink="/" [fragment]="link.fragment" [class.nav_links-active]="activeFragment === link.fragment">
-          {{ link.label }}
+        <a [routerLink]="langPrefix()" [fragment]="link.fragment" [class.nav_links-active]="activeFragment === link.fragment">
+          {{ t().nav[link.key] }}
         </a>
       </li>
     }
   </ul>
 
   <div class="nav_socials">
-    <a class="nav_cv-btn" [href]="cv.en.url" target="_blank" rel="noopener">
-      {{ downloadLabel }}
+    <a class="nav_cv-btn" [href]="lang === 'DE' ? cv.de.url : cv.en.url" target="_blank" rel="noopener">
+      {{ t().nav.downloadCv }}
     </a>
 
     <div class="nav_lang">

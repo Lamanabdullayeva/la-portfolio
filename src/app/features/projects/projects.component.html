@@ -1,8 +1,8 @@
 <div class="projects">
   <div class="projects_header">
-    <a class="projects_back" routerLink="/">{{ labels.back }}</a>
-    <h1 class="projects_title">{{ labels.title }}</h1>
-    <p class="projects_subtitle">{{ labels.subtitle }}</p>
+    <a class="projects_back" [routerLink]="homeLink()">{{ t().projects.back }}</a>
+    <h1 class="projects_title">{{ t().projects.title }}</h1>
+    <p class="projects_subtitle">{{ t().projects.subtitle }}</p>
   </div>
 
   <div class="projects_grid">

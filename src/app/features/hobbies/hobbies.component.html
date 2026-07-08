@@ -1,6 +1,6 @@
 <section class="hobbies" id="hobbies">
   <div class="hobbies_list">
-    @for (hobby of hobbies; track hobby.slug) {
+    @for (hobby of hobbies(); track hobby.slug) {
       <div class="hobbies_card">
         <h3 class="hobbies_title">{{ hobby.name }}</h3>
         <p class="hobbies_desc">{{ hobby.description }}</p>
@@ -12,7 +12,7 @@
           </div>
         }
         @if (hobby.hasLink) {
-          <a class="hobbies_btn" [routerLink]="hobby.linkUrl">{{ hobby.linkLabel }}</a>
+          <a class="hobbies_btn" [routerLink]="langPrefix() + hobby.linkUrl">{{ hobby.linkLabel }}</a>
         }
       </div>
     }

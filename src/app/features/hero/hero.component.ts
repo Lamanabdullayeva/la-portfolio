@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { BadgeComponent } from '../../shared/components/badge/badge.component';
-import { HeroBadge } from '../../core/interfaces/hero-badge.interface';
-import { HERO, HERO_BADGES } from '../../core/constants/hero.constants';
+import { HERO } from '../../core/constants/hero.constants';
+import { TranslationService } from '../../core/i18n/translation.service';
 
 @Component({
   selector: 'la-hero',
@@ -11,11 +11,12 @@ import { HERO, HERO_BADGES } from '../../core/constants/hero.constants';
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
-  readonly name: string          = HERO.name;
-  readonly greeting: string      = HERO.greeting;
-  readonly pronunciation: string = HERO.pronunciation;
-  readonly title: string         = HERO.title;
-  readonly location: string      = HERO.location;
-  readonly photo: string         = HERO.photo;
-  readonly badges: HeroBadge[]   = HERO_BADGES;
+  readonly photo         = HERO.photo;
+  readonly name          = HERO.name;
+  readonly pronunciation = HERO.pronunciation;
+
+  private readonly ts    = inject(TranslationService);
+  readonly t             = this.ts.t;
+  readonly projectsLink  = computed(() => `/${this.ts.currentLang()}/projects`);
+  readonly jewelleryLink = computed(() => `/${this.ts.currentLang()}/jewellery`);
 }

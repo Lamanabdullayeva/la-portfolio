@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Hobby } from '../../core/interfaces/hobby.interface';
 import { HOBBIES } from '../../core/data/hobbies.data';
+import { TranslationService } from '../../core/i18n/translation.service';
 
 @Component({
   selector: 'la-hobbies',
@@ -11,5 +11,17 @@ import { HOBBIES } from '../../core/data/hobbies.data';
   styleUrl: './hobbies.component.scss',
 })
 export class HobbiesComponent {
-  readonly hobbies: Hobby[] = HOBBIES;
+  private readonly ts = inject(TranslationService);
+
+  readonly langPrefix = computed(() => `/${this.ts.currentLang()}`);
+
+  readonly hobbies = computed(() => {
+    const tr = this.ts.t().hobbies;
+    return HOBBIES.map(h => ({
+      ...h,
+      name:        tr[h.slug]?.name        ?? h.name,
+      description: tr[h.slug]?.description ?? h.description,
+      linkLabel:   tr[h.slug]?.linkLabel   ?? h.linkLabel,
+    }));
+  });
 }

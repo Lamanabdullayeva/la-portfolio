@@ -3,9 +3,9 @@
 
     <!-- ── Experience ──────────────────────────────────────────── -->
     <div class="work_block">
-      <h2 class="work_block-title">Experience</h2>
+      <h2 class="work_block-title">{{ t().work.experience }}</h2>
       <div class="work_timeline">
-        @for (item of experience; track item.company + item.period) {
+        @for (item of experience(); track item.company + item.period) {
           <div class="work_entry" [class.work_entry--secondary]="item.type !== 'job'">
             <div class="work_entry-dot"></div>
             <div class="work_entry-body">
@@ -37,9 +37,9 @@
 
     <!-- ── Education ──────────────────────────────────────────── -->
     <div class="work_block">
-      <h2 class="work_block-title">Education</h2>
+      <h2 class="work_block-title">{{ t().work.education }}</h2>
       <div class="work_timeline">
-        @for (item of education; track item.institution) {
+        @for (item of education(); track item.institution) {
           <div class="work_entry work_entry--education">
             <div class="work_entry-dot"></div>
             <div class="work_entry-body">
@@ -61,9 +61,9 @@
 
     <!-- ── Skills ─────────────────────────────────────────────── -->
     <div class="work_block">
-      <h2 class="work_block-title">Skills</h2>
+      <h2 class="work_block-title">{{ t().work.skills }}</h2>
       <div class="work_skill-groups">
-        @for (group of skillGroups; track group.label) {
+        @for (group of skillGroups(); track group.label) {
           <div class="work_skill-group">
             <p class="work_skill-group-label">{{ group.label }}</p>
             <div class="work_tags">
@@ -78,9 +78,9 @@
 
     <!-- ── Languages ──────────────────────────────────────────── -->
     <div class="work_block">
-      <h2 class="work_block-title">Languages</h2>
+      <h2 class="work_block-title">{{ t().work.languages }}</h2>
       <div class="work_languages">
-        @for (lang of languages; track lang.name) {
+        @for (lang of languages(); track lang.name) {
           <div class="work_lang-item">
             <span class="work_lang-name">{{ lang.name }}</span>
             <span class="work_lang-level">{{ lang.level }}</span>

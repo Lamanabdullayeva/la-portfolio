@@ -1,7 +1,8 @@
-import { Component, HostListener, afterNextRender } from '@angular/core';
+import { Component, HostListener, computed, inject, afterNextRender } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { JewelleryImage } from '../../core/interfaces/jewellery-image.interface';
 import { JEWELLERY_IMAGES } from '../../core/data/jewellery.data';
+import { TranslationService } from '../../core/i18n/translation.service';
 
 @Component({
   selector: 'la-jewellery',
@@ -14,6 +15,10 @@ export class JewelleryComponent {
   readonly images: JewelleryImage[] = JEWELLERY_IMAGES;
   activeIndex: number | null = null;
 
+  private readonly ts = inject(TranslationService);
+  readonly t          = this.ts.t;
+  readonly homeLink   = computed(() => `/${this.ts.currentLang()}`);
+
   constructor() {
     afterNextRender(() => window.scrollTo(0, 0));
   }
@@ -22,13 +27,8 @@ export class JewelleryComponent {
     return this.activeIndex !== null ? this.images[this.activeIndex] : null;
   }
 
-  open(index: number): void {
-    this.activeIndex = index;
-  }
-
-  close(): void {
-    this.activeIndex = null;
-  }
+  open(index: number): void { this.activeIndex = index; }
+  close(): void              { this.activeIndex = null; }
 
   prev(): void {
     if (this.activeIndex !== null) {

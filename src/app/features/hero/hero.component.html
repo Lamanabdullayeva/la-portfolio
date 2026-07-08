@@ -1,12 +1,11 @@
 <section class="hero" id="hero">
   <div class="hero_left">
-    <p class="hero_greeting">{{ greeting }} <span class="hero_pronunciation">{{ pronunciation }}</span>,</p>
-    <h1 class="hero_title">{{ title }}</h1>
-    <p class="hero_location">{{ location }}</p>
+    <p class="hero_greeting">{{ t().hero.greeting }} <span class="hero_pronunciation">{{ pronunciation }}</span>,</p>
+    <h1 class="hero_title">{{ t().hero.title }}</h1>
+    <p class="hero_location">{{ t().hero.location }}</p>
     <div class="hero_badges">
-      @for (badge of badges; track badge.label) {
-        <la-badge [label]="badge.label" [link]="badge.link" [fragment]="badge.fragment" />
-      }
+      <la-badge [label]="t().hero.badgeWork" [link]="projectsLink()" />
+      <la-badge [label]="t().hero.badgeJewellery" [link]="jewelleryLink()" />
     </div>
   </div>
 

@@ -1,7 +1,7 @@
-import { Component, afterNextRender } from '@angular/core';
+import { Component, afterNextRender, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { PROJECTS_LABELS } from '../../core/constants/projects.constants';
+import { TranslationService } from '../../core/i18n/translation.service';
 
 interface Project {
   title: string;
@@ -18,7 +18,9 @@ interface Project {
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-  readonly labels = PROJECTS_LABELS;
+  private readonly ts = inject(TranslationService);
+  readonly t          = this.ts.t;
+  readonly homeLink   = computed(() => `/${this.ts.currentLang()}`);
   readonly projects: Project[];
 
   openFullscreen(el: HTMLElement): void {

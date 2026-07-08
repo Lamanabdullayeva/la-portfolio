@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { CONTACT_ITEMS, CONTACT_LABELS } from '../../core/constants/contact.constants';
+import { Component, inject } from '@angular/core';
+import { CONTACT_ITEMS } from '../../core/constants/contact.constants';
+import { TranslationService } from '../../core/i18n/translation.service';
 
 @Component({
   selector: 'la-contact',
@@ -9,8 +10,8 @@ import { CONTACT_ITEMS, CONTACT_LABELS } from '../../core/constants/contact.cons
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  readonly contactItems: typeof CONTACT_ITEMS = CONTACT_ITEMS;
-  readonly labels: typeof CONTACT_LABELS     = CONTACT_LABELS;
+  readonly contactItems = CONTACT_ITEMS;
+  readonly t = inject(TranslationService).t;
 
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
