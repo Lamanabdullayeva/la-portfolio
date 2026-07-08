@@ -3,10 +3,10 @@ import { HeroBadge } from '../interfaces/hero-badge.interface';
 export const HERO = {
   name:          'Laman Abdullayeva',
   greeting:      "Hello, I'm Laman",
-  pronunciation: '[Læman, Läman]',
+  pronunciation: '[Leman, Läman]',
   title:         'Senior Frontend Developer & Jewellery Maker',
   location:      'based in Berlin.',
-  photo:         'assets/profile_photo.jpg',
+  photo:         'assets/profile_photo.JPG',
 } as const;
 
 export const HERO_BADGES: HeroBadge[] = [
