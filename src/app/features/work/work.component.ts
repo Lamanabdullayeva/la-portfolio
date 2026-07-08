@@ -1,15 +1,15 @@
-import { Component, computed, inject } from '@angular/core';
-import { EXPERIENCE } from '../../core/data/experience.data';
-import { EDUCATION } from '../../core/data/education.data';
-import { SKILL_GROUPS } from '../../core/data/skills.data';
-import { TranslationService } from '../../core/i18n/translation.service';
+import { Component, computed, inject } from "@angular/core";
+import { EXPERIENCE } from "../../core/data/experience.data";
+import { EDUCATION } from "../../core/data/education.data";
+import { SKILL_GROUPS } from "../../core/data/skills.data";
+import { TranslationService } from "../../core/i18n/translation.service";
 
 @Component({
-  selector: 'la-work',
+  selector: "la-work",
   standalone: true,
   imports: [],
-  templateUrl: './work.component.html',
-  styleUrl: './work.component.scss',
+  templateUrl: "./work.component.html",
+  styleUrl: "./work.component.scss",
 })
 export class WorkComponent {
   private readonly ts = inject(TranslationService);

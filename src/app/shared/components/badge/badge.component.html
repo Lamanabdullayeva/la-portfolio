@@ -1,5 +1,7 @@
 @if (link) {
-  <a class="badge" [routerLink]="link" [fragment]="fragment ?? undefined">{{ label }}</a>
+  <a class="badge" [routerLink]="link" [fragment]="fragment ?? undefined">{{
+    label
+  }}</a>
 } @else {
   <span class="badge">{{ label }}</span>
 }

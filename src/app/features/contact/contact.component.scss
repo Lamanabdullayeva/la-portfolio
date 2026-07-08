@@ -6,17 +6,17 @@
   min-height: 100vh;
   gap: 2.5rem;
   padding: 5rem 3rem;
-  background: #161D08;
-  --color-text:       #F2EFE9;
+  background: #161d08;
+  --color-text: #f2efe9;
   --color-text-muted: rgba(242, 239, 233, 0.55);
-  --color-border:     rgba(242, 239, 233, 0.15);
-  --color-accent:     #C8D0BF;
+  --color-border: rgba(242, 239, 233, 0.15);
+  --color-accent: #c8d0bf;
   border-top: 0.5px solid rgba(242, 239, 233, 0.15);
 
   &_label {
-    font-family: 'Pacifico', cursive;
+    font-family: "Pacifico", cursive;
     font-size: 2.5rem;
-    color: #F2EFE9;
+    color: #f2efe9;
   }
 
   &_items {
@@ -53,7 +53,7 @@
   &_item-value {
     font-family: var(--font-body);
     font-size: 0.95rem;
-    color: #F2EFE9;
+    color: #f2efe9;
   }
 
   &_top {
@@ -65,10 +65,12 @@
     padding: 0.6rem 1.4rem;
     border-radius: 999px;
     cursor: pointer;
-    transition: color 0.2s, border-color 0.2s;
+    transition:
+      color 0.2s,
+      border-color 0.2s;
 
     &:hover {
-      color: #F2EFE9;
+      color: #f2efe9;
       border-color: rgba(242, 239, 233, 0.6);
     }
   }

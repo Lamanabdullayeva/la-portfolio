@@ -12,7 +12,9 @@
           </div>
         }
         @if (hobby.hasLink) {
-          <a class="hobbies_btn" [routerLink]="langPrefix() + hobby.linkUrl">{{ hobby.linkLabel }}</a>
+          <a class="hobbies_btn" [routerLink]="langPrefix() + hobby.linkUrl">{{
+            hobby.linkLabel
+          }}</a>
         }
       </div>
     }

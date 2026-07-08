@@ -1,12 +1,14 @@
 <section class="work" id="work">
   <div class="work_inner">
-
     <!-- ── Experience ──────────────────────────────────────────── -->
     <div class="work_block">
       <h2 class="work_block-title">{{ t().work.experience }}</h2>
       <div class="work_timeline">
         @for (item of experience(); track item.company + item.period) {
-          <div class="work_entry" [class.work_entry--secondary]="item.type !== 'job'">
+          <div
+            class="work_entry"
+            [class.work_entry--secondary]="item.type !== 'job'"
+          >
             <div class="work_entry-dot"></div>
             <div class="work_entry-body">
               <div class="work_entry-header">
@@ -46,7 +48,9 @@
               <div class="work_entry-header">
                 <div>
                   <p class="work_entry-company">{{ item.institution }}</p>
-                  <p class="work_entry-role">{{ item.degree }} · {{ item.field }}</p>
+                  <p class="work_entry-role">
+                    {{ item.degree }} · {{ item.field }}
+                  </p>
                 </div>
                 <div class="work_entry-meta">
                   <span class="work_entry-period">{{ item.period }}</span>
@@ -88,6 +92,5 @@
         }
       </div>
     </div>
-
   </div>
 </section>

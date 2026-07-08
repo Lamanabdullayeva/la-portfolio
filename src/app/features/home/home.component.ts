@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { HeroComponent } from '../hero/hero.component';
-import { WorkComponent } from '../work/work.component';
-import { HobbiesComponent } from '../hobbies/hobbies.component';
-import { ContactComponent } from '../contact/contact.component';
+import { Component } from "@angular/core";
+import { HeroComponent } from "../hero/hero.component";
+import { WorkComponent } from "../work/work.component";
+import { HobbiesComponent } from "../hobbies/hobbies.component";
+import { ContactComponent } from "../contact/contact.component";
 
 @Component({
-  selector: 'la-home',
+  selector: "la-home",
   standalone: true,
   imports: [HeroComponent, WorkComponent, HobbiesComponent, ContactComponent],
   template: `

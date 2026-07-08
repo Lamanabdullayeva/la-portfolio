@@ -20,11 +20,13 @@
     letter-spacing: 0.04em;
     transition: color 0.2s;
 
-    &:hover { color: var(--color-text); }
+    &:hover {
+      color: var(--color-text);
+    }
   }
 
   &_title {
-    font-family: 'Pacifico', cursive;
+    font-family: "Pacifico", cursive;
     font-size: 3rem;
     font-weight: 400;
     color: var(--color-text);
@@ -59,7 +61,9 @@
       transition: transform 0.3s ease;
     }
 
-    &:hover img { transform: scale(1.03); }
+    &:hover img {
+      transform: scale(1.03);
+    }
   }
 
   &_top {
@@ -72,7 +76,9 @@
     padding: 0.6rem 1.4rem;
     border-radius: 999px;
     cursor: pointer;
-    transition: color 0.2s, border-color 0.2s;
+    transition:
+      color 0.2s,
+      border-color 0.2s;
 
     &:hover {
       color: var(--color-text);
@@ -82,13 +88,20 @@
 
   @media (max-width: 900px) {
     padding: 100px 2rem 5rem;
-    &_grid { width: 90vw; }
+    &_grid {
+      width: 90vw;
+    }
   }
 
   @media (max-width: 640px) {
     padding: 90px 1.5rem 4rem;
-    &_title { font-size: 2rem; }
-    &_grid { width: 100%; grid-template-columns: 1fr; }
+    &_title {
+      font-size: 2rem;
+    }
+    &_grid {
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -115,7 +128,9 @@
     transition: opacity 0.2s;
     line-height: 1;
 
-    &:hover { opacity: 1; }
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &_arrow {
@@ -130,7 +145,9 @@
     line-height: 1;
     user-select: none;
 
-    &:hover { opacity: 1; }
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &_img {

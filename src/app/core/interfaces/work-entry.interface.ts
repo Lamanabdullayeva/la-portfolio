@@ -5,5 +5,5 @@ export interface WorkEntry {
   location: string;
   description: string[];
   tags: string[];
-  type: 'job' | 'internship' | 'research';
+  type: "job" | "internship" | "research";
 }

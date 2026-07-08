@@ -1,21 +1,25 @@
 // ── Design Tokens ────────────────────────────────────────────────────────────
 :root {
   // Colors — Matcha Latte & Sage palette
-  --color-bg:           #F2EFE9; // Oat Milk
-  --color-surface:      #E3E8DB; // Matcha Cream
-  --color-border:       #C8D0C4; // Soft sage border
-  --color-text:         #1F2D24; // Deep Forest — primary text
-  --color-text-muted:   #7F9482; // Soft Sage — secondary text
-  --color-accent:       #7F9482; // Soft Sage — accents
-  --color-accent-light: #A0B5A3; // Light sage — hover
-  --color-badge-bg:     #7F9482; // Soft Sage
+  --color-bg: #f2efe9; // Oat Milk
+  --color-surface: #e3e8db; // Matcha Cream
+  --color-border: #c8d0c4; // Soft sage border
+  --color-text: #1f2d24; // Deep Forest — primary text
+  --color-text-muted: #7f9482; // Soft Sage — secondary text
+  --color-accent: #7f9482; // Soft Sage — accents
+  --color-accent-light: #a0b5a3; // Light sage — hover
+  --color-badge-bg: #7f9482; // Soft Sage
 
-  --font-heading: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
-  --font-body:    -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+  --font-heading:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
+  --font-body:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
 }
 
 // ── Reset ────────────────────────────────────────────────────────────────────
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -36,7 +40,10 @@ body {
 }
 
 // ── Typography ───────────────────────────────────────────────────────────────
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-heading);
   font-weight: 500;
   line-height: 1.15;

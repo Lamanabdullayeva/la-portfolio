@@ -1,15 +1,15 @@
-import { Component, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, Input } from "@angular/core";
+import { RouterLink } from "@angular/router";
 
 @Component({
-  selector: 'la-badge',
+  selector: "la-badge",
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './badge.component.html',
-  styleUrl: './badge.component.scss',
+  templateUrl: "./badge.component.html",
+  styleUrl: "./badge.component.scss",
 })
 export class BadgeComponent {
-  @Input() label = '';
+  @Input() label = "";
   @Input() link: string | null = null;
   @Input() fragment: string | null = null;
 }

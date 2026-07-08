@@ -36,7 +36,10 @@
     padding: 10px 24px;
     cursor: pointer;
     text-decoration: none;
-    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    transition:
+      background 0.2s,
+      border-color 0.2s,
+      color 0.2s;
 
     &:hover {
       background: var(--color-surface);

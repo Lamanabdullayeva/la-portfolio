@@ -1,6 +1,8 @@
 <div class="jewellery">
   <div class="jewellery_header">
-    <a class="jewellery_back" [routerLink]="homeLink()">{{ t().jewellery.back }}</a>
+    <a class="jewellery_back" [routerLink]="homeLink()">{{
+      t().jewellery.back
+    }}</a>
     <h1 class="jewellery_title">{{ t().jewellery.title }}</h1>
     <p class="jewellery_subtitle">{{ t().jewellery.subtitle }}</p>
   </div>
@@ -13,14 +15,31 @@
     }
   </div>
 
-  <button class="jewellery_top" (click)="scrollToTop()">{{ t().jewellery.backToTop }}</button>
+  <button class="jewellery_top" (click)="scrollToTop()">
+    {{ t().jewellery.backToTop }}
+  </button>
 </div>
 
 @if (activeImage) {
   <div class="lightbox" (click)="close()">
     <button class="lightbox_close" (click)="close()">✕</button>
-    <button class="lightbox_arrow lightbox_arrow--prev" (click)="$event.stopPropagation(); prev()">‹</button>
-    <img class="lightbox_img" [src]="activeImage.url" [alt]="activeImage.alt" (click)="$event.stopPropagation()" />
-    <button class="lightbox_arrow lightbox_arrow--next" (click)="$event.stopPropagation(); next()">›</button>
+    <button
+      class="lightbox_arrow lightbox_arrow--prev"
+      (click)="$event.stopPropagation(); prev()"
+    >
+      ‹
+    </button>
+    <img
+      class="lightbox_img"
+      [src]="activeImage.url"
+      [alt]="activeImage.alt"
+      (click)="$event.stopPropagation()"
+    />
+    <button
+      class="lightbox_arrow lightbox_arrow--next"
+      (click)="$event.stopPropagation(); next()"
+    >
+      ›
+    </button>
   </div>
 }
