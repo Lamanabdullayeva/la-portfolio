@@ -96,10 +96,18 @@ export class NavComponent implements OnInit, OnDestroy {
     this.langOpen = false;
     const newLang = option.toLowerCase() as "en" | "de";
     this.ts.setLang(newLang);
-    // Navigate to same sub-page in new language, or home if switching from home
+
     const currentPath = this.router.url.split("#")[0];
     const newPath = currentPath.replace(/^\/(en|de)/, `/${newLang}`);
-    this.router.navigateByUrl(newPath);
+    const isHome = /^\/(en|de)\/?$/.test(currentPath);
+
+    if (isHome && this.activeFragment) {
+      // Use activeFragment — IntersectionObserver tracks what's actually visible,
+      // router.url fragment only reflects the last clicked nav link.
+      this.router.navigate([newPath], { fragment: this.activeFragment });
+    } else {
+      this.router.navigateByUrl(newPath);
+    }
   }
 
   @HostListener("document:click", ["$event"])
