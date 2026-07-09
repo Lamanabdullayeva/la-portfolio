@@ -15,7 +15,7 @@
     margin-bottom: 2rem;
     font-family: var(--font-body);
     font-size: 0.9rem;
-    color: var(--color-text-muted);
+    color: var(--color-accent);
     text-decoration: none;
     letter-spacing: 0.04em;
     transition: color 0.2s;
@@ -36,7 +36,7 @@
   &_subtitle {
     font-family: var(--font-body);
     font-size: 0.9rem;
-    color: var(--color-text-muted);
+    color: var(--color-accent);
   }
 
   // ── Grid ────────────────────────────────────────────────────────
@@ -110,7 +110,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-text-muted);
+    color: var(--color-accent);
 
     svg {
       width: 72px;
@@ -139,7 +139,7 @@
   &_desc {
     font-family: var(--font-body);
     font-size: 0.875rem;
-    color: var(--color-text-muted);
+    color: var(--color-accent);
     line-height: 1.6;
   }
 
@@ -153,7 +153,7 @@
   &_tag {
     font-family: var(--font-body);
     font-size: 0.75rem;
-    color: var(--color-text-muted);
+    color: var(--color-accent);
     border: 0.5px solid var(--color-border);
     border-radius: 20px;
     padding: 2px 10px;
