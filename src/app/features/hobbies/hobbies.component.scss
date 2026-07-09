@@ -1,6 +1,7 @@
 .hobbies {
   padding: 120px 3rem 6rem;
   background: #f2efe9;
+  clip-path: inset(0);   // clips sticky child to section bounds — no bleed into adjacent sections
   --color-text: #1f2d24;
   --color-text-muted: rgba(31, 45, 36, 0.65);
   --color-border: rgba(31, 45, 36, 0.2);
@@ -8,6 +9,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  // ── Sticky botanical illustration ──────────────────────────────────────
+  &_deco-anchor {
+    order: 1;          // visually last in flex flow → natural position at section bottom
+    position: sticky;
+    bottom: 0;
+    align-self: stretch;
+    height: 0;
+    pointer-events: none;
+    z-index: 0;        // behind the cards (list is order:0, higher stacking)
+  }
+
+  &_deco {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 55vh;
+    width: auto;
+    display: block;
+  }
 
   &_list {
     width: 40vw;
