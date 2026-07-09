@@ -8,7 +8,7 @@
   border-top: 0.5px solid var(--color-border);
 
   &_label {
-    font-family: var(--font-body);
+    font-family: var(--font-sans);
     font-size: 1rem;
     color: var(--color-accent);
     letter-spacing: 0.06em;
@@ -30,7 +30,7 @@
     border: 0.5px solid var(--color-border);
     border-radius: 20px;
     color: var(--color-text);
-    font-family: var(--font-body);
+    font-family: var(--font-sans);
     font-size: 0.95rem;
     font-weight: 500;
     padding: 10px 24px;

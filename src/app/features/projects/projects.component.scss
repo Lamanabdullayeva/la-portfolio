@@ -13,7 +13,7 @@
   &_back {
     display: inline-block;
     margin-bottom: 2rem;
-    font-family: var(--font-body);
+    font-family: var(--font-sans);
     font-size: 0.9rem;
     color: var(--color-accent);
     text-decoration: none;
@@ -26,7 +26,7 @@
   }
 
   &_title {
-    font-family: "Pacifico", cursive;
+    font-family: var(--font-sans);
     font-size: 3rem;
     font-weight: 400;
     color: var(--color-text);
@@ -34,7 +34,7 @@
   }
 
   &_subtitle {
-    font-family: var(--font-body);
+    font-family: var(--font-sans);
     font-size: 0.9rem;
     color: var(--color-accent);
   }
@@ -129,7 +129,7 @@
   }
 
   &_name {
-    font-family: var(--font-heading);
+    font-family: var(--font-sans);
     font-size: 1rem;
     font-weight: 600;
     color: var(--color-text);
@@ -137,7 +137,7 @@
   }
 
   &_desc {
-    font-family: var(--font-body);
+    font-family: var(--font-sans);
     font-size: 0.875rem;
     color: var(--color-accent);
     line-height: 1.6;
@@ -151,7 +151,7 @@
   }
 
   &_tag {
-    font-family: var(--font-body);
+    font-family: var(--font-sans);
     font-size: 0.75rem;
     color: var(--color-accent);
     border: 0.5px solid var(--color-border);

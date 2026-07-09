@@ -13,7 +13,7 @@
   border-top: 0.5px solid var(--color-on-dark-faint);
 
   &_label {
-    font-family: "Pacifico", cursive;
+    font-family: var(--font-sans);
     font-size: 2.5rem;
     color: var(--color-text);
   }
@@ -42,7 +42,7 @@
   }
 
   &_item-label {
-    font-family: var(--font-body);
+    font-family: var(--font-sans);
     font-size: 0.8rem;
     color: var(--color-accent);
     text-transform: uppercase;
@@ -50,7 +50,7 @@
   }
 
   &_item-value {
-    font-family: var(--font-body);
+    font-family: var(--font-sans);
     font-size: 0.95rem;
     color: var(--color-text);
   }
@@ -59,7 +59,7 @@
     background: none;
     border: 1px solid var(--color-on-dark-faint);
     color: var(--color-accent);
-    font-family: var(--font-body);
+    font-family: var(--font-sans);
     font-size: 0.9rem;
     padding: 0.6rem 1.4rem;
     border-radius: 999px;
