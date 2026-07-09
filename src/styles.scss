@@ -1,21 +1,55 @@
 // ── Design Tokens ────────────────────────────────────────────────────────────
 :root {
-  // Colors — Matcha Latte & Sage palette
-  --color-bg: #f2efe9; // Oat Milk
-  --color-surface: #e3e8db; // Matcha Cream
-  --color-border: #c8d0c4; // Soft sage border
-  --color-text: #1f2d24; // Deep Forest — primary text
-  --color-text-muted: #7f9482; // Soft Sage — secondary text
-  --color-accent: #7f9482; // Soft Sage — accents
-  --color-accent-light: #a0b5a3; // Light sage — hover
-  --color-badge-bg: #7f9482; // Soft Sage
+  // ── Base palette (light theme) ───────────────────────────────────────────
+  --color-bg: #f2efe9;          // Oat Milk — page background
+  --color-surface: #e3e8db;     // Matcha Cream — card/surface
+  --color-border: #c8d0c4;      // Soft sage border
+  --color-text: #1f2d24;        // Deep Forest — primary text
+  --color-text-muted: #7f9482;  // Soft Sage — secondary text
+  --color-accent: #7f9482;      // Soft Sage — accents
+  --color-accent-light: #a0b5a3;// Light sage — hover
+  --color-badge-bg: #7f9482;    // Soft Sage
 
+  // ── Section backgrounds ──────────────────────────────────────────────────
+  --color-hero-bg:    #8b9878;  // Sage green — hero
+  --color-work-bg:    #424d2c;  // Deep olive — work / nav CV button
+  --color-contact-bg: #161d08;  // Near-black — contact
+
+  // ── Card & shared surfaces ───────────────────────────────────────────────
+  --color-card-bg: #c8d0bf;     // Muted sage — hobby cards, accent on dark sections
+
+  // ── Navigation ───────────────────────────────────────────────────────────
+  --color-nav-link: #293416;    // Dark olive — nav links, lang button
+  --color-nav-icon: #2a2a18;    // Very dark olive — social icons
+
+  // ── Light elements on dark section backgrounds ──────────────────────────
+  --color-on-dark:         #f2efe9;
+  --color-on-dark-muted:   rgba(242, 239, 233, 0.65);
+  --color-on-dark-faint:   rgba(242, 239, 233, 0.15);
+  --color-on-dark-border:  rgba(242, 239, 233, 0.2);
+  --color-on-dark-surface: rgba(242, 239, 233, 0.08);
+
+  // ── Dark elements on light section backgrounds ───────────────────────────
+  --color-on-light-muted:  rgba(31, 45, 36, 0.75);
+  --color-on-light-dim:    rgba(31, 45, 36, 0.65);
+  --color-on-light-border: rgba(31, 45, 36, 0.2);
+  --color-on-light-subtle: rgba(31, 45, 36, 0.1);
+  --color-on-light-bg:     rgba(31, 45, 36, 0.08);
+
+  // ── Overlay ──────────────────────────────────────────────────────────────
+  --color-overlay: rgba(0, 0, 0, 0.88); // lightbox backdrop
+
+
+  black: #000000;
+  white: #ffffff;
+
+  // ── Typography ───────────────────────────────────────────────────────────
   --font-heading:
     -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
   --font-body:
     -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
 
-  // Nav height — used for scroll-padding and section top padding
+  // ── Nav height — scroll-padding and section top padding ─────────────────
   --nav-height: 74px;
 }
 

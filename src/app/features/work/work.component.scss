@@ -1,13 +1,13 @@
 .work {
   min-height: 100vh;
   padding: 120px 3rem 6rem;
-  background: #424d2c;
-  --color-text: #f2efe9;
-  --color-text-muted: rgba(242, 239, 233, 0.65);
-  --color-border: rgba(242, 239, 233, 0.2);
-  --color-surface: rgba(242, 239, 233, 0.08);
-  --color-accent: #c8d0bf;
-  border-top: 0.5px solid rgba(242, 239, 233, 0.2);
+  background: var(--color-work-bg);
+  --color-text:       var(--color-on-dark);
+  --color-text-muted: var(--color-on-dark-muted);
+  --color-border:     var(--color-on-dark-border);
+  --color-surface:    var(--color-on-dark-surface);
+  --color-accent:     var(--color-card-bg);
+  border-top: 0.5px solid var(--color-on-dark-border);
 
   &_inner {
     max-width: 860px;

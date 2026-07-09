@@ -5,12 +5,12 @@
   min-height: 100vh;
   padding: 80px 3rem 0;
   gap: 3rem;
-  background: #8b9878;
-  --color-text: #f2efe9;
-  --color-text-muted: rgba(242, 239, 233, 0.65);
-  --color-border: rgba(242, 239, 233, 0.2);
-  --color-badge-bg: rgba(242, 239, 233, 0.15);
-  --color-accent: #c8d0bf;
+  background: var(--color-hero-bg);
+  --color-text:       var(--color-on-dark);
+  --color-text-muted: var(--color-on-dark-muted);
+  --color-border:     var(--color-on-dark-border);
+  --color-badge-bg:   var(--color-on-dark-faint);
+  --color-accent:     var(--color-card-bg);
 
   // ── Left column ────────────────────────────────────────────────────────
   &_left {

@@ -6,17 +6,17 @@
   min-height: 100vh;
   gap: 2.5rem;
   padding: 5rem 3rem;
-  background: #161d08;
-  --color-text: #f2efe9;
-  --color-text-muted: rgba(242, 239, 233, 0.55);
-  --color-border: rgba(242, 239, 233, 0.15);
-  --color-accent: #c8d0bf;
-  border-top: 0.5px solid rgba(242, 239, 233, 0.15);
+  background: var(--color-contact-bg);
+  --color-text:       var(--color-on-dark);
+  --color-text-muted: rgba(242, 239, 233, 0.55); // contact uses 0.55, not the shared 0.65
+  --color-border:     var(--color-on-dark-faint);
+  --color-accent:     var(--color-card-bg);
+  border-top: 0.5px solid var(--color-on-dark-faint);
 
   &_label {
     font-family: "Pacifico", cursive;
     font-size: 2.5rem;
-    color: #f2efe9;
+    color: var(--color-text);
   }
 
   &_items {
@@ -32,20 +32,20 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-    border: 0.5px solid rgba(242, 239, 233, 0.2);
+    border: 0.5px solid var(--color-on-dark-border);
     border-radius: 12px;
     text-decoration: none;
     transition: border-color 0.2s;
 
     &:hover {
-      border-color: rgba(242, 239, 233, 0.6);
+      border-color: var(--color-on-dark);
     }
   }
 
   &_item-label {
     font-family: var(--font-body);
     font-size: 0.8rem;
-    color: rgba(242, 239, 233, 0.55);
+    color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.06em;
   }
@@ -53,13 +53,13 @@
   &_item-value {
     font-family: var(--font-body);
     font-size: 0.95rem;
-    color: #f2efe9;
+    color: var(--color-text);
   }
 
   &_top {
     background: none;
-    border: 1px solid rgba(242, 239, 233, 0.25);
-    color: rgba(242, 239, 233, 0.55);
+    border: 1px solid var(--color-on-dark-faint);
+    color: var(--color-text-muted);
     font-family: var(--font-body);
     font-size: 0.9rem;
     padding: 0.6rem 1.4rem;
@@ -70,8 +70,8 @@
       border-color 0.2s;
 
     &:hover {
-      color: #f2efe9;
-      border-color: rgba(242, 239, 233, 0.6);
+      color: var(--color-text);
+      border-color: var(--color-on-dark-border);
     }
   }
 
