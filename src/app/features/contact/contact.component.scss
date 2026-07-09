@@ -10,7 +10,7 @@
   --color-text:       var(--color-on-dark);
   --color-text-muted: rgba(242, 239, 233, 0.55); // contact uses 0.55, not the shared 0.65
   --color-border:     var(--color-on-dark-faint);
-  --color-accent:     var(--color-card-bg);
+  --color-accent:     var(--color-border);
   border-top: 0.5px solid var(--color-on-dark-faint);
 
   &_label {

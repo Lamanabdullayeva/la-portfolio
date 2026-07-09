@@ -11,8 +11,7 @@
   --color-text:       var(--color-on-dark);
   --color-text-muted: var(--color-on-dark-muted);
   --color-border:     var(--color-on-dark-border);
-  --color-badge-bg:   var(--color-on-dark-faint);
-  --color-accent:     var(--color-card-bg);
+  --color-accent:     var(--color-border);
 
   // ── Decorative illustration ────────────────────────────────────────────
   &_deco {

@@ -37,8 +37,8 @@
   &_card {
     border-radius: 16px;
     padding: 3.5rem 2.5rem;
-    background: var(--color-card-bg);
-    color: var(--color-text);
+    background: var(--color-hero-bg);
+    color: var(--color-contact-bg);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -49,13 +49,14 @@
     font-size: 2.2rem;
     font-weight: 400;
     line-height: 1.2;
-    color: var(--color-text);
+    color: var(--color-contact-bg);
   }
 
   &_desc {
     font-family: var(--font-body);
     font-size: 0.9rem;
-    color: var(--color-on-light-muted);
+    color: var(--color-contact-bg);
+    opacity: 0.75;
     line-height: 1.65;
     white-space: pre-line;
   }
@@ -70,12 +71,13 @@
   &_tag {
     font-family: var(--font-body);
     font-size: 0.78rem;
-    color: var(--color-on-light-dim);
-    background: var(--color-on-light-bg);
-    border: 0.5px solid var(--color-on-light-border);
+    color: var(--color-contact-bg);
+    background: var(--color-contact-bg-subtle);
+    border: 0.5px solid var(--color-contact-bg-border);
     border-radius: 20px;
     padding: 3px 12px;
     letter-spacing: 0.03em;
+    opacity: 0.85;
   }
 
   &_btn {

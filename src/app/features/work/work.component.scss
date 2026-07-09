@@ -5,8 +5,7 @@
   --color-text:       var(--color-on-dark);
   --color-text-muted: var(--color-on-dark-muted);
   --color-border:     var(--color-on-dark-border);
-  --color-surface:    var(--color-on-dark-surface);
-  --color-accent:     var(--color-card-bg);
+  --color-accent:     var(--color-border);
   border-top: 0.5px solid var(--color-on-dark-border);
 
   &_inner {
@@ -69,7 +68,7 @@
   }
 
   &_entry--education &_entry-dot {
-    background: var(--color-surface);
+    background: var(--color-on-dark-surface);
     border: 1.5px solid var(--color-accent);
   }
 
@@ -157,7 +156,7 @@
     font-family: var(--font-body);
     font-size: 0.8rem;
     color: var(--color-text-muted);
-    background: var(--color-surface);
+    background: var(--color-on-dark-surface);
     border: 0.5px solid var(--color-border);
     border-radius: 20px;
     padding: 3px 12px;
