@@ -1,6 +1,6 @@
 .projects {
   min-height: 100vh;
-  padding: 120px 4rem 6rem;
+  padding: calc(var(--nav-height) + 2rem) 4rem 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,7 +161,7 @@
 
   // ── 2 columns ───────────────────────────────────────────────────
   @media (max-width: 1100px) {
-    padding: 100px 3rem 5rem;
+    padding: calc(var(--nav-height) + 2rem) 3rem 5rem;
     &_grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -169,7 +169,7 @@
 
   // ── 1 column ────────────────────────────────────────────────────
   @media (max-width: 700px) {
-    padding: 90px 1.5rem 4rem;
+    padding: calc(var(--nav-height) + 2rem) 1.5rem 4rem;
     &_title {
       font-size: 2rem;
     }
