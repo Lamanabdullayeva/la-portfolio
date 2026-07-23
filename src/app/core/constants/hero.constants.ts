@@ -6,7 +6,7 @@ export const HERO = {
   pronunciation: "[Leman, Läman]",
   title: "Senior Frontend Developer & Jewellery Maker",
   location: "based in Berlin.",
-  photo: "assets/profile_photo.JPG",
+  photo: "assets/profile_photo.jpg",
 } as const;
 
 export const HERO_BADGES: HeroBadge[] = [
