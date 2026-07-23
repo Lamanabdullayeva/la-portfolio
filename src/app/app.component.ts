@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router, RouterOutlet, NavigationEnd } from "@angular/router";
+import { Router, RouterOutlet, NavigationStart, NavigationEnd } from "@angular/router";
 import { filter } from "rxjs";
 import { NavComponent } from "./shared/components/nav/nav.component";
 
@@ -16,12 +16,11 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     history.scrollRestoration = "manual";
     this.router.events
-      .pipe(filter((e) => e instanceof NavigationEnd))
+      .pipe(filter((e) => e instanceof NavigationStart || e instanceof NavigationEnd))
       .subscribe((e: any) => {
-        const path = e.urlAfterRedirects.split("#")[0];
-        const isHome = /^\/(en|de)\/?$/.test(path);
-        if (!isHome) {
-          window.scrollTo(0, 0);
+        const url: string = e.url ?? e.urlAfterRedirects;
+        if (!url.includes("#")) {
+          window.scrollTo({ top: 0, left: 0, behavior: "instant" });
         }
       });
   }

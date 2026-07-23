@@ -3,7 +3,6 @@ import {
   HostListener,
   computed,
   inject,
-  afterNextRender,
   Signal,
 } from "@angular/core";
 import { RouterLink } from "@angular/router";
@@ -29,9 +28,7 @@ export class JewelleryComponent {
     () => `/${this.ts.currentLang()}`,
   );
 
-  constructor() {
-    afterNextRender(() => window.scrollTo(0, 0));
-  }
+  constructor() {}
 
   get activeImage(): JewelleryImage | null {
     return this.activeIndex !== null ? this.images[this.activeIndex] : null;

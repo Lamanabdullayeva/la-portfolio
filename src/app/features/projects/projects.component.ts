@@ -1,4 +1,4 @@
-import { Component, afterNextRender, computed, inject } from "@angular/core";
+import { Component, computed, inject } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
 import { TranslationService } from "../../core/i18n/translation.service";
@@ -28,7 +28,6 @@ export class ProjectsComponent {
   }
 
   constructor(sanitizer: DomSanitizer) {
-    afterNextRender(() => window.scrollTo(0, 0));
     this.projects = [
       {
         title: "Video Trimming",
