@@ -107,7 +107,7 @@ export const DE: Translations = {
     sport: {
       name: "Sport",
       description:
-        "Ich gehe regelmäßig zu Pilates und Yoga und versuche, mindestens einmal pro Woche ins Fitnessstudio zu gehen.",
+        "Ich gehe regelmäßig zu Pilates, Bouldern und Yoga und versuche, mindestens einmal pro Woche ins Fitnessstudio zu gehen.",
     },
     nature: {
       name: "Natur & Outdoor",

@@ -59,7 +59,7 @@ export const HOBBIES: Hobby[] = [
     bg: "#424D2C",
     color: "#F2EFE9",
     description:
-      "I go to pilates and yoga regularly and try to make it to the gym at least once a week.",
+      "I go to pilates yoga and bouldering regularly and try to make it to the gym at least once a week.",
     hasLink: false,
     tags: [
       "discipline",
